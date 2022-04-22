@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\java\\College"
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"src"
+		],
+		"java.project.outputPath": "bin",
+		"liveServer.settings.multiRootWorkspaceName": "College"
+	}
+}
