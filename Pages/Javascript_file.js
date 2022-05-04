@@ -1,13 +1,59 @@
 
 
-
+document.getElementById("in").selected = true;
 let Newscards = document.getElementById('Newscards');
 
 let news_category ="";
-let news_country = "in";
+let news_country = "";
 let background_url = "";
+// var articlesA = [];
 
+// let ind  = document.querySelector("#in");
+// ind.addEventListener('click', function() {
+//     news_country = "in";
+// });
+var ind = document.getElementById('ind');
+ind.addEventListener('click', function() {
+        news_country = "in";
+xhrRequest.open('GET',`https://saurav.tech/NewsAPI/top-headlines/category/${news_category}/${news_country}.json`,true);
 
+    });
+    var usa = document.getElementById('usa');
+usa.addEventListener('click', function() {
+        news_country = "us";
+xhrRequest.open('GET',`https://saurav.tech/NewsAPI/top-headlines/category/${news_category}/${news_country}.json`,true);
+
+    });
+var e = document.getElementById("in");
+var strUser = e.value;
+if(strUser == "in"){
+    news_country = "in";
+
+}
+else if(strUser == "us"){
+    news_country = "us";
+}
+else if(strUser == "ru"){
+    news_country = "ru";
+}
+else if(strUser == "au"){
+    news_country = "au";
+}
+else if(strUser == "gb"){
+    news_country = "gb";
+}
+else if(strUser == "fr"){
+    news_country = "fr";
+    strUser.onlick = function(){
+    change_country();
+    }
+}
+document.getElementById("us").onclick = function() {change_country()};
+function change_country()
+{
+    location.reload();
+   document.getElementById("fr").selected = true;
+}
 if(document.title.includes("Business")){
    news_category = "business";
    background_url = "https://wallpaperbat.com/img/484175-business-office-desktop-wallpaper-top-free-business-office-desktop-background.jpg";
@@ -53,7 +99,7 @@ xhrRequest.onload = function (){
    if(this.status===200){
        let resJSON = JSON.parse(this.responseText);
        let articles = resJSON.articles;
-       console.log(articles);
+    //    console.log(articles);
        let newsContent ="";
        let imgurl ="https://media.istockphoto.com/videos/black-and-white-loading-indicator-on-dark-background-screen-animation-video-id1129874433?s=640x640";
        articles.forEach(element => {
