@@ -1,0 +1,41 @@
+body{
+    background: url("https://static.vecteezy.com/system/resources/thumbnails/004/216/831/original/3d-world-news-background-loop-free-video.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+#card_image{
+    height:180px;
+    width:auto;
+}
+#heading{
+    margin: 1em 0 0.5em 0;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    position: relative;  
+    font-size: 36px;
+    line-height: 40px;
+    padding: 15px 15px 15px 15%;
+    color: #85f048;
+    box-shadow: 
+        inset 0 0 0 1px rgb(42, 212, 119), 
+        inset 0 0 5px rgba(42, 212, 119, 0.5),
+        inset -285px 0 35px rgb(42, 212, 119);
+    border-radius: 0 10px 0 10px;
+    background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stockfreeimages.com%2Fp1%2Frainforest-horizontal.html&psig=AOvVaw3MzJxfBg6P78B2TdHVaABn&ust=1635685592503000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKCq3ciZ8vMCFQAAAAAdAAAAABAD") no-repeat center left;
+}
+
+#text-color{
+    color: rgb(42, 212, 119);
+    opacity: 0.85;
+}
+
+#news{
+    display:inline-flex;
+    height:400px;
+    margin: 10px;
+    background-color:rgb(39, 37, 37);   
+    color: white;
+    border-radius:25px;
+    background-size: fixed;
+    overflow: hidden;
+    float: none;
+}
